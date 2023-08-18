@@ -16,9 +16,8 @@ This Project consists of steps on how to:
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
 - <b><a href="https://limacharlie.io/">LimaCharlie</a></b>
-- <b>Sliver C2 Framework</b>
+- <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
-
 <h2>Environments Used </h2>
 
 - <b>Windows 11</b> (Target)
