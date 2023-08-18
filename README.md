@@ -1,14 +1,15 @@
 <h1>Creating A SOC & Defending Attacks</h1>
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
 
 This Project consists of steps on how to:
-1.Build a SOC using LimaCharlie EDR solution
-2.Setup a Command-and-control (C2) framework
-3.Using that C2 framework to emulate threat actor behaviors
-4.Writing A Detection and Response rule for attacks thrown by threat actors
-<br />
+ <ol type = "1">
+  
+<li>Build a SOC using LimaCharlie EDR solution</li>
+<li>Setup a Command-and-control (C2) framework</li>
+<li>Using that C2 framework to emulate threat actor behaviors</li>
+<li>Writing A Detection & Response rule to block attacks thrown by threat actors</li>
+</ol>
 
 <h2>Languages and Utilities Used</h2>
 
