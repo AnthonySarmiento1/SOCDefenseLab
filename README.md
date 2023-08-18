@@ -18,7 +18,7 @@ Project consists of a simple PowerShell script that walks the user through "zero
 <h2>Environments Used </h2>
 
 - <b>Windows 11</b> (Target)
-- <b>Ubuntu Linux1</b> (Attacker)
+- <b>Ubuntu Linux</b> (Attacker)
 - <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
 
