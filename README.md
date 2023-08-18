@@ -8,7 +8,7 @@ This Project consists of steps on how to:
 <li>Build a SOC using LimaCharlie's EDR solution</li>
 <li>Setup a Command-and-control (C2) framework</li>
 <li>Using Sliver C2 framework to emulate threat actor behaviors</li>
-<li>Writing A Detection & Response rule to alert for and block attacks thrown by threat actors</li>
+<li>Writing Detection & Response rules to alert for and block attacks thrown by threat actors</li>
 </ol>
 
 <h2>Languages and Utilities Used</h2>
