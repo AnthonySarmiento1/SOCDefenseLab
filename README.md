@@ -20,7 +20,7 @@ This Project consists of steps on how to:
 - <b>Python3</b>
 <h2>Environments Used </h2>
 
-- <b>Windows 11</b> (Target)
+- <b>Windows 11</b> (Victim)
 - <b>Ubuntu Linux</b> (Attacker)
 - <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
