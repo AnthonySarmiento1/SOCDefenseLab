@@ -10,12 +10,16 @@ Project consists of a simple PowerShell script that walks the user through "zero
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>VMware Workstaton</b>
+- <b>LimaCharlie</b>(https://youtu.be/7eJexJVCqJo)
+- <b>VMware Workstaton</b>
+- <b>VMware Workstaton</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
-
+- <b>Windows 11</b> (Target)
+- <b>Ubuntu Linux1</b> (Attacker)
+- <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
 
 <p align="center">
