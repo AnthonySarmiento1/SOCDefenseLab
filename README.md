@@ -11,9 +11,9 @@ Project consists of a simple PowerShell script that walks the user through "zero
 
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
-- <b>LimaCharlie</b>(https://youtu.be/7eJexJVCqJo)
-- <b>VMware Workstaton</b>
-- <b>VMware Workstaton</b>
+- <b><a href="https://limacharlie.io/">LimaCharlie</a></b>
+- <b>Sliver C2 Framework</b>
+- <b>Python3</b>
 
 <h2>Environments Used </h2>
 
