@@ -5,7 +5,7 @@
 This Project consists of steps on how to:
  <ol type = "1">
   
-<li>Build a SOC using LimaCharlie EDR solution</li>
+<li>Build a SOC using LimaCharlie's EDR solution</li>
 <li>Setup a Command-and-control (C2) framework</li>
 <li>Using that C2 framework to emulate threat actor behaviors</li>
 <li>Writing A Detection & Response rule to alert for and block attacks thrown by threat actors</li>
