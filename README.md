@@ -15,7 +15,7 @@ This Project consists of steps on how to:
 
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
-- <b><a href="https://limacharlie.io/">LimaCharlie’s Cloud SecOps</a></b>
+- <b><a href="https://limacharlie.io/">LimaCharlie’s SaaS</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
 <h2>Environments Used </h2>
@@ -30,7 +30,9 @@ This Project consists of steps on how to:
 <img src=""/>
        ############################################################################################################### 
        -->
-<h3><u>Part 1: Setup</u></h3>
+
+       
+<h3>Part 1: Setting Up LimaCharlie</h3>
 
 
 <p align="center">
@@ -56,28 +58,19 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows Vm to gener
    <code> Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10</code>
    <br />
    <img src="https://i.imgur.com/j6cy6Aq.png" height="80%" width="80%" />
-   
+   <p align="center">
+    
+   Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine, or another VM.
   
-  <br />
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" />
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" />
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" />
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" />
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" />
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" />
-</p>
+   <img src="https://imgur.com/RP9cHJC.png"/>
+  
+    After Creating An Account Create an organization using the "Extended Detection & Response Standard" Template.
+    
+   <img src="https://imgur.com/RP9cHJC.png"/>
+    
+    Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
+  
+  
+ <h3>Part 2: Sliver C2 Framework</h3>
+ <h3>Part 3: Launching Attacks</h3>
+ <h3>Part 4: Detecting and Blocking Attacks</h3>
