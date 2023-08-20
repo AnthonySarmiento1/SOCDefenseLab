@@ -58,18 +58,17 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows Vm to gener
    <code> Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10</code>
    <br />
    <img src="https://i.imgur.com/j6cy6Aq.png" height="80%" width="80%" />
-   <p align="center">
-    
+   
    Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine, or another VM.
   
    <img src="https://imgur.com/RP9cHJC.png"/>
   
-    After Creating An Account Create an organization using the "Extended Detection & Response Standard" Template.
+    <p>After Creating An Account Create an organization using the "Extended Detection & Response Standard" Template.</p>
     
-   <img src="https://imgur.com/RP9cHJC.png"/>
+   <img src="https://imgur.com/jNfEkET.png"/>
     
     Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
-  
+  </p>
   
  <h3>Part 2: Sliver C2 Framework</h3>
  <h3>Part 3: Launching Attacks</h3>
