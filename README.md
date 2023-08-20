@@ -30,7 +30,7 @@ This Project consists of steps on how to:
 <img src=""/>
        ############################################################################################################### 
        -->
-<h3>Part 1: Setup</h3>
+<h3><u>Part 1: Setup</u></h3>
 
 
 <p align="center">
