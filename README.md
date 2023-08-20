@@ -25,31 +25,59 @@ This Project consists of steps on how to:
 - <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
 
+<!--  ############################################################################################################## 
+<a href=""> </a>
+<img src=""/>
+       ############################################################################################################### 
+       -->
+<h3>Part 1: Setup</h3>
+
+
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<u>First Download <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare</a> and install A <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
+ <br/>
+<img src="https://i.imgur.com/jReyXB2.png" height="80%" width="80%" />
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows Vm to generate telemetry for LimaCharlie using these administrative powershell commands:  <br/>
+  <ol type = "1">
+   <li> <code>Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip </code></li>
+   <li> <code>Expand-Archive -LiteralPath C:\Windows\Temp\Sysmon.zip -DestinationPath C:\Windows\Temp\Sysmon</code></li>
+   <li> <code>Invoke-WebRequest -Uri https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml -OutFile C:\Windows\Temp\Sysmon\sysmonconfig.xml</code></li>
+   <li> <code>C:\Windows\Temp\Sysmon\Sysmon64.exe -accepteula -i C:\Windows\Temp\Sysmon\sysmonconfig.xml</code></li> 
+  </ol>
+   <br />
+   To Confirm Sysmon is running use these commands:
+   <br />
+   <code>Get-Service sysmon64</code>
+   <br />
+  <img src="https://i.imgur.com/WW1gzEB.png"/> </a>
+   <br />
+   <code> Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10</code>
+   <br />
+   <img src="https://i.imgur.com/j6cy6Aq.png" height="80%" width="80%" />
+   
+  
+  <br />
+<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" />
 <br />
 <br />
 Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" />
 <br />
 <br />
 Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" />
 <br />
 <br />
 Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" />
 <br />
 <br />
 Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" />
 <br />
 <br />
 Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" />
 </p>
