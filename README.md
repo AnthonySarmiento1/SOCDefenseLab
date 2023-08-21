@@ -15,13 +15,13 @@ This Project consists of steps on how to:
 
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
-- <b><a href="https://limacharlie.io/">LimaCharlie’s SaaS</a></b>
+- <b><a href="https://limacharlie.io/">LimaCharlie</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
 <h2>Environments Used </h2>
 
-- <b>Windows 11</b> (Victim)
-- <b>Ubuntu Linux</b> (Attacker)
+- <b>Windows 11 VM</b> (Victim)
+- <b>Ubuntu Linux VM</b> (Attacker)
 - <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
 
@@ -36,7 +36,7 @@ This Project consists of steps on how to:
 
 
 <p align="center">
-<u>First Download <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare</a> and install A <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
+<u>First Download either <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox</a> ,or <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare Workstation</a> then install both <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
  <br/>
 <img src="https://i.imgur.com/jReyXB2.png" height="80%" width="80%" />
 <br />
