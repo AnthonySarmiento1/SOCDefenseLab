@@ -163,8 +163,10 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
 
  
 <p align="center">
- From here I Launched a LSASS credential dumping attack that threat actors can use to pull the credentials of current users,and also domain admins.This could potentialy give threat actors a new vector of attack to move laterally across a network.
+ From here I Launched a LSASS credential dumping attack that threat actors can use to pull the credentials of current users,and also domain admins.This could potentialy give threat actors a new attack vector to move laterally across a network.
+<li><code>procdump -n lsass.exe -s lsass.dmp</code></li>
 
+<p align="center">
 
 
  
