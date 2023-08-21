@@ -36,7 +36,7 @@ This Project consists of steps on how to:
 
 
 <p align="center">
-<u>First Download either <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox</a> ,or <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare Workstation</a> then install both <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
+<u>First Download either <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox</a> ,or <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare Workstation</a> then install a <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
  <br/>
 <img src="https://i.imgur.com/jReyXB2.png" height="80%" width="80%" />
 <br />
