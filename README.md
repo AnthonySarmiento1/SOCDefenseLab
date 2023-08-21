@@ -155,8 +155,17 @@ Back on Sliver open your sessions and interact with your new C2 session to verif
 <li><code>whoami</code></li>
 </ol>
 <img src="https://imgur.com/8Yo04Zc.png"/>
+<p align="center">
+This SOC Lab is now fully complete and now a personal Sandbox for whatever needs experimenting with.
 
+ 
  <h3>Part 3: Launching Attacks</h3>
+
+ 
+<p align="center">
+ From here I Launched a LSASS credential dumping attack that threat actors can use to pull the credentials of current users,and also domain admins.This could potentialy give threat actors a new vector of attack to move laterally across a network.
+
+
 
  
  <h3>Part 4: Detecting and Blocking Attacks</h3>
