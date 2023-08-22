@@ -16,7 +16,7 @@ This Project consists of steps on how to:
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
 - <b><a href="https://limacharlie.io/">LimaCharlie's SecOps Cloud Platform</a></b>
-- <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomwear Simulator</a></b>
+- <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomware Simulator</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
 <h2>Environments Used </h2>
@@ -26,13 +26,7 @@ This Project consists of steps on how to:
 - <b>Windows 10</b> (Security Operations Center)
 <h2>Program walk-through:</h2>
 
-<!--  ############################################################################################################## 
-<a href=""> </a>
-<img src=""/>
-       ############################################################################################################### 
-       -->
 
-       
 <h3>Part 1: Setting Up LimaCharlie</h3>
 
 
@@ -106,7 +100,7 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows VM to gener
  <h3>Part 2: Sliver C2 Framework</h3>
 
 <p align="center">
-Next is to Setup Sliver in linux ,swap to your Linux VM and run these commands:
+Next is to Setup Sliver in linux, swap to your Linux VM and run these commands:
 </p>
 <ol type = "1">
 <li><code>wget https://github.com/BishopFox/sliver/releases/download/v1.5.34/sliver-server_linux -O /usr/local/bin/sliver-server</code></li>
@@ -164,11 +158,31 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
 
  
 <p align="center">
- From here I Launched a LSASS credential dumping attack that threat actors can use to pull the credentials of current users,and also domain admins.This could potentialy give threat actors a new attack vector to move laterally across a network.
+ From here I Launched a LSASS credential dumping attack that threat actors can use to pull the credentials of current users, and also domain admins.This could potentialy give threat actors a new attack vector to move laterally across a network.
 <li><code>procdump -n lsass.exe -s lsass.dmp</code></li>
 
 <p align="center">
- Also Testing out ransomware using Florian Roth's Ransomwear Simulator
+ Also Testing out ransomware using Florian Roth's Ransomware Simulator
 <img src="https://imgur.com/UsWuijc.png"/>
 
  <h3>Part 4: Detecting and Blocking Attacks</h3>
+ 
+<p align="center">
+After launching both attacks I used LimaCharlie's SIEM to look for threat actor behavior first finding the LSASS credential dumping attack using a Sensitive Process filter.
+<img src="https://imgur.com/lHwq2DD.png"/>
+ 
+<p align="center">
+I then wrote a custom Detection & Response rule to Alert for when LSASS is accsessed,and send a report.
+<img src="https://imgur.com/BcCJ5mj.png"/>
+ 
+ <p align="center">  
+ After that I moved onto the ransomware, and first identified it in the timeline.
+<img src="https://imgur.com/eY1LEdq.png"/>
+  
+  <p align="center">   
+Wrote Another D&R rule for sending alerts, but then took it a step up and if this process was ran again to also terminate the parent process.Which would also kill my c2 payload, and removing shell accsess from the attacker VM.
+<img src="https://imgur.com/CD9phES.png"/>
+   
+   <p align="center">
+To confirm my new D&R rule was running properly I retried running Florian Roth's Ransomware Simulator.It was stopped immediately ,and a new detection alert was sent.
+<img src="https://imgur.com/q20aInI.png"/>
