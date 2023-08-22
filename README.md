@@ -169,20 +169,63 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
  
 <p align="center">
 After launching both attacks I used LimaCharlie's SIEM to look for threat actor behavior first finding the LSASS credential dumping attack using a Sensitive Process filter.
+  <p align="center">
 <img src="https://imgur.com/lHwq2DD.png"/>
  
 <p align="center">
 I then wrote a custom Detection & Response rule to Alert for when LSASS is accsessed,and send a report.
-<img src="https://imgur.com/BcCJ5mj.png"/>
  
+</p>
+Detect:
+ </br>
+ <code>event: SENSITIVE_PROCESS_ACCESS
+op: ends with
+path: event/*/TARGET/FILE_PATH
+value: lsass.exe</code>
+ </br>
+ </br>
+ Respond:
+  </br>
+  <code>- action: report
+  name: LSASS access</code>
+
  <p align="center">  
- After that I moved onto the ransomware, and first identified it in the timeline.
+ After that I moved onto the ransomware.First identifying a new process on the timeline that was caused by the ransomware.
+   <p align="center">
 <img src="https://imgur.com/eY1LEdq.png"/>
   
   <p align="center">   
-Wrote Another D&R rule for sending alerts, but then took it a step up and if this process was ran again to also terminate the parent process.Which would also kill my c2 payload, and removing shell accsess from the attacker VM.
+Then Wrote Another D&R rule for sending alerts, but then took it a step up and if this process was ran again to also terminate the parent process.Which would also kill my c2 payload, and removing shell accsess from the attacker VM.
+
+   </p>
+Detect:
+ </br>
+ <code>  - op: is
+    path: event/FILE_PATH
+    value: C:\Windows\system32\vssadmin.exe
+  - op: contains
+    path: event/COMMAND_LINE
+    value: 'delete'
+  - op: contains
+    path: event/COMMAND_LINE
+    value: 'shadows'
+  - op: contains
+    path: event/COMMAND_LINE
+    value: '/all'</code>
+ </br>
+ </br>
+ Respond:
+  </br>
+  <code>- action: report
+  name: vss_deletion_kill_it
+- action: task
+  command:
+    - deny_tree
+    - <<routing/parent>></code>
+    <p align="center">
 <img src="https://imgur.com/CD9phES.png"/>
    
    <p align="center">
-To confirm my new D&R rule was running properly I retried running Florian Roth's Ransomware Simulator.It was stopped immediately ,and a new detection alert was sent.
+Finally to confirm my new D&R rule was running properly.I restarted Florian Roth's Ransomware Simulator, and it was stopped immediately with a new detection alert being sent to report this action.
+     <p align="center">
 <img src="https://imgur.com/q20aInI.png"/>
