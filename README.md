@@ -16,6 +16,7 @@ This Project consists of steps on how to:
 - <b>PowerShell</b> 
 - <b>VMware Workstaton</b>
 - <b><a href="https://limacharlie.io/">LimaCharlie's SecOps Cloud Platform</a></b>
+- <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomwear Simulator</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
 <h2>Environments Used </h2>
@@ -167,7 +168,7 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
 <li><code>procdump -n lsass.exe -s lsass.dmp</code></li>
 
 <p align="center">
+ Also Testing out ransomware using Florian Roth's Ransomwear Simulator
+<img src="https://imgur.com/UsWuijc.png"/>
 
-
- 
  <h3>Part 4: Detecting and Blocking Attacks</h3>
