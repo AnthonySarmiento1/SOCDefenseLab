@@ -211,21 +211,22 @@ Detect:
     value: 'shadows'
   - op: contains
     path: event/COMMAND_LINE
-    value: '/all'</code>
+    value: '/all' </code>
  </br>
  </br>
+ </code>
  Respond:
-  </br>
-  <code>- action: report
+ <code>- action: report
   name: vss_deletion_kill_it
 - action: task
   command:
     - deny_tree
-    - <<routing/parent>></code>
-    <p align="center">
-<img src="https://imgur.com/CD9phES.png"/>
-   
+    - << routing/parent >> </code>
+  </br>
+
+### <img src="https://imgur.com/CD9phES.png"/>
+
    <p align="center">
-Finally to confirm my new D&R rule was running properly.I restarted Florian Roth's Ransomware Simulator, and it was stopped immediately with a new detection alert being sent to report this action.
+Finally to confirm my new D&R rule was running properly. I restarted Florian Roth's Ransomware Simulator, and it was stopped immediately with a new detection alert being sent to report this action.
      <p align="center">
 <img src="https://imgur.com/q20aInI.png"/>
