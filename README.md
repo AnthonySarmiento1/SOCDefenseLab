@@ -227,6 +227,6 @@ Detect:
 ### <img src="https://imgur.com/CD9phES.png"/>
 
    <p align="center">
-Finally to confirm my new D&R rule was running properly. I restarted Florian Roth's Ransomware Simulator, and it was stopped immediately with a new detection alert being sent to report this action.
+Finally to confirm my new D&R rule was running properly. I restarted Florian Roth's Ransomware Simulator, and the process was killed immediately. Along with a new detection alert being sent to report this action.
      <p align="center">
 <img src="https://imgur.com/q20aInI.png"/>
