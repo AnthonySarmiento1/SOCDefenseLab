@@ -14,7 +14,7 @@ This Project consists of steps on how to:
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>VMware Workstaton</b>
+- <b>VMware Workstation</b>
 - <b><a href="https://limacharlie.io/">LimaCharlie's SecOps Cloud Platform</a></b>
 - <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomware Simulator</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
