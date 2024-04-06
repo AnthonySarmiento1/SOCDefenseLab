@@ -152,7 +152,7 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
 <li><code>procdump -n lsass.exe -s lsass.dmp</code></li>
 
 <p align="center">
- Also Testing out ransomware using Florian Roth's Ransomware Simulator
+ Also Testing out ransomware using <a href="https://github.com/NextronSystems/ransomware-simulator/">Florian Roth's Ransomware Simulator <a/>
 <img src="https://imgur.com/UsWuijc.png"/>
 
  <h3>Part 4: Detecting and Blocking Attacks</h3>
