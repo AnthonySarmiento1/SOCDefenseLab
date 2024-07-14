@@ -14,7 +14,7 @@ This Project consists of steps on how to:
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>VMware Workstation</b>
+- <b><a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">VMware Workstation</a></b>
 - <b><a href="https://limacharlie.io/">LimaCharlie's SecOps Cloud Platform</a></b>
 - <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomware Simulator</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
@@ -32,7 +32,7 @@ This Project consists of steps on how to:
 
 
 <p align="center">
-<u>First Download either <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox</a>, or <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro/workstation-pro-evaluation.html.html">VMWare Workstation</a> then install a <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
+<u>First Download either <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox</a>, or <a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">VMWare Workstation</a> then install a <a href="https://ubuntu.com/download/server">Linux</a> and <a href="https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/">Windows 11</a> ISO:</u> 
  <br/>
 <img src="https://i.imgur.com/jReyXB2.png" height="80%" width="80%" />
 <br />
