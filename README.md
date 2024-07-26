@@ -1,6 +1,6 @@
 <h1>Creating A SOC & Defending Attacks</h1>
 
-<h2>Description</h2>
+<h2>Introduction</h2>
 
 This Project consists of steps on how to:
  <ol type = "1">
@@ -16,7 +16,7 @@ This Project consists of steps on how to:
 - <b>PowerShell</b> 
 - <b><a href="https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-player/workstation-player-evaluation.html.html">VMware Workstation</a></b>
 - <b><a href="https://limacharlie.io/">LimaCharlie's SecOps Cloud Platform</a></b>
-- <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomware Simulator</a></b>
+- <b><a href="https://github.com/NextronSystems/ransomware-simulator">Florian Roth's Ransomware</a></b>
 - <b><a href="https://bishopfox.com/tools/sliver">Sliver C2 Framework</a></b>
 - <b>Python3</b>
 
@@ -28,7 +28,7 @@ This Project consists of steps on how to:
 <h2>Program walk-through:</h2>
 
 
-<h3>Part 1: Setting Up LimaCharlie</h3>
+<details><summary><h3>Part 1: Setting Up LimaCharlie 🛡</h3></summary>
 
 
 <p align="center">
@@ -57,7 +57,7 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows VM to gener
 
 
    <p align="center">
-   Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine or another VM. After that create an organization using the "Extended Detection & Response Standard" Template. Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
+   Now Create an <a href="https://app.limacharlie.io/signup"> LimaCharlie account</a> on your Host machine or another VM. Create an organization using the "Extended Detection & Response Standard" Template. Once the organization is created add a sensor to your Windows 11 VM using the "x86-64.exe" architecture.
 
  In your Windows VM, open an Administrative PowerShell prompt and paste the following commands:
   <br />
@@ -87,8 +87,8 @@ Install Sysmon and SwiftOnSecurity’s Sysmon config on your Windows VM to gener
 <p align="center">
   After Saving that rule LimaCharlie will start sending Sysmon logs to your timeline.
 <img src="https://imgur.com/xnrCVKz.png"/>
- 
- <h3>Part 2: Sliver C2 Framework</h3>
+</details>
+ <details><summary> <h3>Part 2: Sliver C2 Framework :crossed_swords:</h3> </summary>
 
 <p align="center">
 Next is to set up Sliver in Linux, swap to your Linux VM, and run these commands:
@@ -142,10 +142,10 @@ Back on Sliver open your sessions, and interact with your new C2 session to veri
 </ol>
 <img src="https://imgur.com/8Yo04Zc.png"/>
 <p align="center">
-This SOC Lab is now fully complete and now a personal Sandbox for whatever needs experimenting with.
 
- 
- <h3>Part 3: Launching Attacks</h3>
+
+ </details>
+<details><summary> <h3>Part 3: Launching Attacks :crossed_swords:</h3> </summary>
 
  
 <p align="center">
@@ -153,10 +153,10 @@ This SOC Lab is now fully complete and now a personal Sandbox for whatever needs
 <li><code>procdump -n lsass.exe -s lsass.dmp</code></li>
 
 <p align="center">
- Also Testing out ransomware using <a href="https://github.com/NextronSystems/ransomware-simulator/">Florian Roth's Ransomware Simulator <a/>
+ Also Testing out ransomware using <a href="https://github.com/NextronSystems/ransomware-simulator/">Florian Roth's Ransomware <a/>
 <img src="https://imgur.com/UsWuijc.png"/>
-
- <h3>Part 4: Detecting and Blocking Attacks</h3>
+ </details>
+<details><summary> <h3>Part 4: Detecting and Blocking Attacks	🛡</h3></summary>
  
 <p align="center">
 After launching both attacks I used LimaCharlie's SIEM to look for threat actor behavior first finding the LSASS credential dumping attack using a Sensitive Process filter.
@@ -218,6 +218,7 @@ Detect:
 ### <img src="https://imgur.com/CD9phES.png"/>
 
    <p align="center">
-Finally to confirm my new D&R rule was running properly. I restarted Florian Roth's Ransomware Simulator, and the process was killed immediately. Along with a new detection alert being sent to report this action.
+Finally to confirm my new D&R rule was running properly. I restarted Florian Roth's Ransomware, and the process was killed immediately. A new detection alert will be sent to report this action.
      <p align="center">
 <img src="https://imgur.com/q20aInI.png"/>
+ </details>
